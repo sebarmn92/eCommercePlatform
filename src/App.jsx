@@ -3,7 +3,7 @@ import { useState } from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from './routes/home/home'
 import Navigation from './routes/navigation/navigation'
-import SignIn from './routes/signin/signin.jsx'
+import Authentification from './routes/authentification/authentification.jsx'
 
 
 
@@ -22,7 +22,7 @@ function App() {
       <Route path='/' element={<Navigation/>}>
         <Route index element={<Home />}/>
         <Route path='shop' element={<Shop />}/>
-        <Route path='signIn' element={<SignIn />}/>
+        <Route path='auth' element={<Authentification />}/>
       </Route> 
       
     </Routes>
