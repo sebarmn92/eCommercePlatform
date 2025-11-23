@@ -19,7 +19,8 @@ const SignInForm = () => {
     }
 
     const signinWithGoogle = async () =>{
-        const {user} = await signInWithGooglePopup();
+        await signInWithGooglePopup();
+        resetFormFields();
     }
 
 
@@ -27,7 +28,7 @@ const SignInForm = () => {
         event.preventDefault();
 
         try{
-            const response = await signInAuthUserWithEmailAndPassword(email, password);
+            await signInAuthUserWithEmailAndPassword(email, password);
             resetFormFields();
 
         }catch(err) {
