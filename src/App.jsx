@@ -5,6 +5,7 @@ import Home from './routes/home/home'
 import Navigation from './routes/navigation/navigation'
 import Authentification from './routes/authentification/authentification.jsx'
 import Shop from './routes/shop/shop.jsx'
+import Checkout from './routes/checkout/checkout.jsx'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<Home />}/>
         <Route path='shop' element={<Shop />}/>
         <Route path='auth' element={<Authentification />}/>
+        <Route path='checkout' element={<Checkout />}/>
       </Route> 
       
     </Routes>

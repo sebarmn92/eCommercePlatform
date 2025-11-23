@@ -1,4 +1,4 @@
-import { Outlet, Link} from 'react-router-dom'
+import { Outlet, Link, useNavigate} from 'react-router-dom'
 import { useContext } from 'react'
 import Logo from '../../assets/crown.svg?react'
 import { UserContext } from '../../context/user.context'
@@ -11,9 +11,11 @@ import './navigation.scss'
 const Navigation = () =>{
   const {currentUser} = useContext(UserContext)
   const {isCartOpen} = useContext(CartContext)
+  const navigate = useNavigate();
 
   const signOutHandler = async () =>{
     const response = await signOutUser()
+    navigate('/')
   }
 
   return (
