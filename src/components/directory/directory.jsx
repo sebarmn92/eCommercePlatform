@@ -1,15 +1,15 @@
-import CategoryItem from '..//category-item/category-item'
-import './directory.scss'
+import DirectoryItem from '../directory-item/directory-item';
 
-const Directory = ({categories}) => {
+import './directory.scss';
 
-    return (
-    <div className="directory-container">
-      {categories.map(({id, title, imageUrl}) => (
-        <CategoryItem key={id} title={title} imageUrl={imageUrl}/>
+const Directory = ({ categories }) => {
+  return (
+    <div className='directory-container'>
+      {categories.map((category) => (
+        <DirectoryItem key={category.id} category={category} />
       ))}
     </div>
-    )
-}
+  );
+};
 
-export default Directory
+export default Directory;
